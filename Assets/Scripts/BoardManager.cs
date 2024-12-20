@@ -70,20 +70,20 @@ public class BoardManager : MonoBehaviour
         }
     }
 
-    void generateDynamite()
-    {
+    //void generateDynamite()
+    //{
 
 
-        for (int i = 0; i < totalDynamites; i++)
-        {
-            int randomX = UnityEngine.Random.Range(0, rows);
-            int randomY = UnityEngine.Random.Range(0, columns);
+    //    for (int i = 0; i < totalDynamites; i++)
+    //    {
+    //        int randomX = UnityEngine.Random.Range(0, rows);
+    //        int randomY = UnityEngine.Random.Range(0, columns);
 
-            Vector3 position = new Vector3(randomX * tileSpacing, randomY * tileSpacing, 0);
+    //        Vector3 position = new Vector3(randomX * tileSpacing, randomY * tileSpacing, 0);
 
-            GameObject gem = Instantiate(gemPrefab, position, Quaternion.identity, gemParent);
-        }
-    }
+    //        GameObject gem = Instantiate(gemPrefab, position, Quaternion.identity, gemParent);
+    //    }
+    //}
 
 
     void moveCamera()
