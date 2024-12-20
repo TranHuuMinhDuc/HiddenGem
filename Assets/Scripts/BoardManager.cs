@@ -19,7 +19,7 @@ public class BoardManager : MonoBehaviour
 
     [SerializeField] private Transform _camera;
 
-
+   
 
     // Start is called before the first frame update
     void Start()
@@ -75,6 +75,6 @@ public class BoardManager : MonoBehaviour
 
         _camera.position = centerPosition;
     }
-    
 
+    
 }
