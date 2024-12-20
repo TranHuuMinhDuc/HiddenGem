@@ -12,8 +12,12 @@ public class BoardManager : MonoBehaviour
     public GameObject tilePrefab;
     public Transform boardParent;
 
+    public int totalGems = 0;
     public GameObject gemPrefab;
     public Transform gemParent;
+
+    public int totalDynamites = 0;
+    private int currentDynamite = 0;
 
     public float tileSpacing = 1.1f;
 
@@ -53,9 +57,24 @@ public class BoardManager : MonoBehaviour
 
     void generateGem()
     {
-        int totalGems = UnityEngine.Random.Range(1,3);
+        
 
         for (int i = 0;i < totalGems; i++)
+        {
+            int randomX = UnityEngine.Random.Range(0, rows);
+            int randomY = UnityEngine.Random.Range(0, columns);
+
+            Vector3 position = new Vector3(randomX * tileSpacing, randomY * tileSpacing, 0);
+
+            GameObject gem = Instantiate(gemPrefab, position, Quaternion.identity, gemParent);
+        }
+    }
+
+    void generateDynamite()
+    {
+
+
+        for (int i = 0; i < totalDynamites; i++)
         {
             int randomX = UnityEngine.Random.Range(0, rows);
             int randomY = UnityEngine.Random.Range(0, columns);
